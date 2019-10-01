@@ -4,7 +4,7 @@ echo "Updating/Upgrading OS..."
 sudo apt update && sudo apt -y upgrade
 echo "Downloading latest build..."
 wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0/dapscoin_linux-v1.0.0.zip
-echo "Installing unzip
+echo "Installing unzip"
 sudo apt-get install unzip
 echo "Unzipping dapscoin_linux-v1.0.0.zip..."
 sudo unzip dapscoin_linux-v1.0.0.zip -d /usr/local/bin
