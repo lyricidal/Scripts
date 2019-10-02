@@ -9,11 +9,11 @@ sudo apt-get install unzip -y
 echo "Unzipping dapscoin_linux-v1.0.0.zip..."
 sudo unzip dapscoin_linux-v1.0.0.zip -d /usr/local/bin
 echo "Creating copies of dapscoind..."
-sudo cp /usr/local/bin/dapscoind /usr/local/bin/dapscoind00
-sudo mv /usr/local/bin/dapscoind /usr/local/bin/dapscoind01
-sudo mv /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind02
-sudo mv /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind03
-sudo mv /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind04
+sudo mv /usr/local/bin/dapscoind /usr/local/bin/dapscoind00
+sudo cp /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind01
+sudo cp /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind02
+sudo cp /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind03
+sudo cp /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind04
 echo "Creating copies of dapscoin-cli..."
 sudo mv /usr/local/bin/dapscoin-cli /usr/local/bin/dapscoin-cli00
 sudo cp /usr/local/bin/dapscoin-cli00 /usr/local/bin/dapscoin-cli01
