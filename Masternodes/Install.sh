@@ -16,5 +16,11 @@ mkdir ~/.dapscoin
 cd ~/.dapscoin
 echo "Editing dapscoin.conf..."
 vi dapscoin.conf
+echo "Setting up and enabling fail2ban..."
+sudo apt-get install fail2ban -y
+sudo ufw allow ssh
+sudo ufw allow 53572
+sudo ufw allow 53573
+sudo ufw enable
 echo "Launching dapscoind..."
 dapscoind -daemon
