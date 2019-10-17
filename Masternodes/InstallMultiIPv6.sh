@@ -7,7 +7,7 @@ wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping dapscoin_linux-v1.0.0.zip..."
-sudo unzip master_linux-v1.0.2.zip -d /usr/local/bin
+sudo unzip -jo master_linux-v1.0.2.zip -d /usr/local/bin
 echo "Creating copies of dapscoind..."
 sudo mv /usr/local/bin/dapscoind /usr/local/bin/dapscoind00
 sudo cp /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind01
