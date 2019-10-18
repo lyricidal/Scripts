@@ -1,3 +1,6 @@
+#!/bin/sh
+clear
+echo "Starting DAPS Bootstrap install script"
 echo "Stopping dapscoind..."
 dapscoin-cli stop
 sleep 5

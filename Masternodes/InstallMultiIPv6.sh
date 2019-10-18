@@ -1,3 +1,4 @@
+#!/bin/sh
 clear
 echo "Starting DAPS Masternode download and install..."
 echo "Updating/Upgrading OS..."

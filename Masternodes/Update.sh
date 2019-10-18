@@ -1,3 +1,6 @@
+#!/bin/sh
+clear
+echo "Starting DAPS Masternode update script"
 echo "Stopping dapscoind..."
 dapscoin-cli stop
 echo "Downloading update..."

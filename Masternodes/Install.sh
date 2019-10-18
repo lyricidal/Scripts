@@ -1,5 +1,6 @@
+#!/bin/sh
 clear
-echo "Starting DAPS Masternode download and install..."
+echo "Starting DAPS Masternode download and install script"
 echo "Updating/Upgrading OS..."
 sudo apt update && sudo apt upgrade -y
 echo "Downloading latest build..."
