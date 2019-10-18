@@ -15,7 +15,18 @@ echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
 cd ~/.dapscoin
 echo "Editing dapscoin.conf..."
-vi dapscoin.conf
+echo rpcuser= >> dapscoin.conf
+echo rpcpassword= >> dapscoin.conf
+echo rpcallowip=127.0.0.1 >> dapscoin.conf
+echo server=1 >> dapscoin.conf
+echo daemon=1 >> dapscoin.conf
+echo staking=0 >> dapscoin.conf
+echo logtimestamps=1 >> dapscoin.conf
+echomaxconnections=256 >> dapscoin.conf
+echo masternode=1 >> dapscoin.conf
+echo externalip= >> dapscoin.conf
+echo masternodeprivkey= >> dapscoin.conf
+vi dapscoin.conf >> dapscoin.conf
 echo "Setting up and enabling fail2ban..."
 sudo apt-get install fail2ban -y
 sudo ufw allow ssh
