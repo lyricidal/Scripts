@@ -34,3 +34,7 @@ sudo ufw allow 53573
 sudo ufw enable
 echo "Launching dapscoind..."
 dapscoind -daemon
+echo "Cleaning up..."
+cd
+rm -rf master_linux-v1.0.2.zip
+echo "DAPS Masternode installed succesfully!"
