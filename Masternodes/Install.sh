@@ -9,9 +9,7 @@ echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping dapscoin_linux-v1.0.0.zip..."
 sudo unzip -jo master_linux-v1.0.2.zip -d /usr/local/bin
-chmod +x /usr/local/bin/dapscoind
-chmod +x /usr/local/bin/dapscoin-cli
-chmod +x /usr/local/bin/dapscoin-qt
+sudo chmod +x /usr/local/bin/dapscoin*
 echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
 cd ~/.dapscoin
