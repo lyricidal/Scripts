@@ -4,11 +4,11 @@ echo "Starting DAPS Masternode download and install script"
 echo "Updating/Upgrading OS..."
 sudo apt update && sudo apt upgrade -y
 echo "Downloading latest build..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v1.0.2.zip
+wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
-echo "Unzipping dapscoin_linux-v1.0.0.zip..."
-sudo unzip -jo master_linux-v1.0.2.zip -d /usr/local/bin
+echo "Unzipping latest zip..."
+sudo unzip -jo master_linux-v1.0.3.4.zip -d /usr/local/bin
 sudo chmod +x /usr/local/bin/dapscoin*
 echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
@@ -36,5 +36,5 @@ echo "Launching dapscoind..."
 dapscoind -daemon
 echo "Cleaning up..."
 cd
-rm -rf master_linux-v1.0.2.zip
+rm -rf master_linux-v1.0.3.4.zip
 echo "DAPS Masternode installed succesfully!"
