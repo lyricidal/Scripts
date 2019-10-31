@@ -185,8 +185,8 @@ sudo nano ~/.bash_aliases
 then paste the following into the file, editing YourRPCUser and YourRPCPass with the correct information you set in your dapscoin.conf files.
 
 # dapscoind00
-alias init00='dapscoind00 -datadir=/root/dapscoin00 -wallet=wallet00.dat'
-alias rescan00='dapscoind00 -datadir=/root/dapscoin00 -wallet=wallet00.dat -rescan'
+alias init00='dapscoind00 -datadir=/root/.dapscoin00 -wallet=wallet00.dat'
+alias rescan00='dapscoind00 -datadir=/root/.dapscoin00 -wallet=wallet00.dat -rescan'
 alias dapscoind00='dapscoind00 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53572'
 alias getinfo00='dapscoin-cli00 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53572 getinfo'
 alias addy00='dapscoin-cli00 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53572 geststealthaddress'
@@ -194,8 +194,8 @@ alias debug00='dapscoin-cli00 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpc
 alias stop00='dapscoin-cli00 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53572 stop'
 
 # dapscoind01
-alias init01='dapscoind01 -datadir=/root/dapscoin01 -wallet=wallet01.dat'
-alias rescan01='dapscoind01 -datadir=/root/dapscoin01 -wallet=wallet01.dat -rescan'
+alias init01='dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat'
+alias rescan01='dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat -rescan'
 alias dapscoind01='dapscoind01 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53574'
 alias getinfo01='dapscoin-cli01 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53574 getinfo'
 alias addy01='dapscoin-cli01 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53574 geststealthaddress'
@@ -203,8 +203,8 @@ alias debug01='dapscoin-cli01 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpc
 alias stop01='dapscoin-cli01 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53574 stop'
 
 # dapscoind02
-alias init02='dapscoind02 -datadir=/root/dapscoin02 -wallet=wallet02.dat'
-alias rescan02='dapscoind02 -datadir=/root/dapscoin02 -wallet=wallet02.dat -rescan'
+alias init02='dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat'
+alias rescan02='dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat -rescan'
 alias dapscoind02='dapscoind02 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53575'
 alias getinfo02='dapscoin-cli02 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53575 getinfo'
 alias addy02='dapscoin-cli02 -rpcuser=YourRPCUser -rpcpassword=YourRPCPass -rpcport=53575 geststealthaddress'
