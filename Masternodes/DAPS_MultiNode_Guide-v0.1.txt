@@ -71,8 +71,8 @@ The commands on VPS would be as follows:
 
 mv .dapscoin .dapscoind00
 mv ~/.dapscoin00/wallet.dat ~/.dapscoin00/wallet00.dat
-cp -R dapscoin00 dapscoin01
-cp -R dapscoin00 dapscoin02
+cp -R .dapscoin00 .dapscoin01
+cp -R .dapscoin00 .dapscoin02
 rm ~/.dapscoin01/wallet00.dat ~/.dapscoin02/wallet00.dat
 
 We will also copy our dapscoind over to be named dapscoind00, dapscoind01, and dapscoind02, etc. We will do the same for dapscoin-cli.
@@ -92,7 +92,7 @@ dapscoin.conf Configuration
 -----------------------
 Using the text editor of your choice on your VPS, we will be editing ~/dapscoind00/dapscoin.conf, ~/dapscoind01/dapscoin.conf, and ~/dapscoind02/dapscoin.conf.
 
-~/dapscoin00/dapscoin.conf
+~/.dapscoin00/dapscoin.conf
 Only your first instance should have listen=1
 Where you see the first bind= use your own machines local IP address.
 Replace the 2nd bind= and the masternodeaddr= with your own machines IPv6 address.
@@ -113,11 +113,11 @@ bind=[2001:0000:0000:0000:0000:0000:0000:7a40]:53572
 masternode=1
 masternodeaddr=[2001:0000:0000:0000:0000:0000:0000:7a40]:53572
 masternodeprivkey=MTM0YzIzMDIwMjE0MjVmMWI4OWM2NTA1ZTM1MDM2MGUyMGI5Zjgx
-datadir=/root/dapscoin00
+datadir=/root/.dapscoin00
 wallet=wallet00.dat
 
 
-~/dapscoind01/dapscoin.conf
+~/.dapscoind01/dapscoin.conf
 Notice the rpcport= value has changed.
 The bind= is your next IPv6 address.
 Use another value from masternode genkey from your Cool wallet.
@@ -138,11 +138,11 @@ bind=[2001:0000:0000:0000:0000:0000:0000:7a41]:53572
 masternode=1
 masternodeaddr=[2001:0000:0000:0000:0000:0000:0000:7a41]:53572
 masternodeprivkey=ZjBlNTdlMDQyMTEyODEwNDM5MjZlNjM3MGM1MWQ0MDIwMmQzMjEx
-datadir=/root/dapscoin01
+datadir=/root/.dapscoin01
 wallet=wallet01.dat
 
 
-~/dapscoind02/dapscoin.conf**
+~/.dapscoind02/dapscoin.conf**
 Notice the rpcport= value has changed again
 The bind= is your next IPv6 address.
 
@@ -162,7 +162,7 @@ bind=[2001:0000:0000:0000:0000:0000:0000:7a41]:53572
 masternode=1
 masternodeaddr=[2001:0000:0000:0000:0000:0000:0000:7a41]:53572
 masternodeprivkey=NjU4MGM2N2Q4N2MyMTkxNzYzZWFhMzk4NzlkY2EyMDhkODViOGI4
-datadir=/root/dapscoin02
+datadir=/root/.dapscoin02
 wallet=wallet02.dat
 
 masternode.conf Configuration
