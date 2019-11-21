@@ -4,11 +4,11 @@ echo "Starting DAPS Masternode download and install..."
 echo "Updating/Upgrading OS..."
 sudo apt update && sudo apt upgrade -y
 echo "Downloading latest build..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip
+wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.4/master_linux-v1.0.4.6.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping latest zip..."
-sudo unzip -jo master_linux-v1.0.3.4.zip -d /usr/local/bin
+sudo unzip -jo master_linux-v1.0.4.6.zip -d /usr/local/bin
 echo "Creating copies of dapscoind..."
 sudo mv /usr/local/bin/dapscoind /usr/local/bin/dapscoind00
 sudo cp /usr/local/bin/dapscoind00 /usr/local/bin/dapscoind01
@@ -36,5 +36,5 @@ sudo ufw allow 53573
 sudo ufw enable
 echo "Cleaning up..."
 cd
-rm -rf master_linux-v1.0.3.4.zip
-echo "DAPS Masternode installed succesfully!"
+rm -rf master_linux-v1.0.4.6.zip
+echo "DAPS Masternode installed successfully!"
