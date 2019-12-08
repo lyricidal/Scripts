@@ -157,10 +157,10 @@ daemon=1
 logtimestamps=1
 maxconnections=128
 externalip=[2001:0000:0000:0000:0000:0000:0000:7a42]
-bind=[2001:0000:0000:0000:0000:0000:0000:7a41]:53572
+bind=[2001:0000:0000:0000:0000:0000:0000:7a42]:53572
 #add the value generated with 'masternode genkey'
 masternode=1
-masternodeaddr=[2001:0000:0000:0000:0000:0000:0000:7a41]:53572
+masternodeaddr=[2001:0000:0000:0000:0000:0000:0000:7a42]:53572
 masternodeprivkey=NjU4MGM2N2Q4N2MyMTkxNzYzZWFhMzk4NzlkY2EyMDhkODViOGI4
 datadir=/root/.dapscoin02
 wallet=wallet02.dat
