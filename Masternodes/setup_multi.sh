@@ -42,16 +42,16 @@ if [[ $DOSETUP =~ "y" ]] ; then
   cd
 
   ## INSTALL
-  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5/dapscoin-v1.0.5.7-linux.zip
+  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5/dapscoin-v1.0.5.8-linux.zip
   sudo apt-get install unzip
-  sudo unzip dapscoin-v1.0.5.7-linux.zip -d /usr/local/bin
+  sudo unzip dapscoin-v1.0.5.8-linux.zip -d /usr/local/bin
   chmod +x /usr/local/bin/dapscoind
   chmod +x /usr/local/bin/dapscoin-cli
   chmod +x /usr/local/bin/dapscoin-qt
   sudo chmod 755 daspcoin*
   sudo mv dapscoin* /usr/bin
   cd
-  rm -rf dapscoin-v1.0.5.7-linux.zip
+  rm -rf dapscoin-v1.0.5.8-linux.zip
 
   echo "Setting up and enabling fail2ban..."
   sudo apt-get install fail2ban -y
@@ -122,20 +122,6 @@ for i in `seq 1 1 $MNCOUNT`; do
   echo "bind=[$IPADDRESS]:53572" >> ${NAME}.conf_TEMP
   echo "masternode=1" >> ${NAME}.conf_TEMP
   echo "masternodeprivkey=$PRIVKEY" >> ${NAME}.conf_TEMP
-  echo "addnode=212.241.70.213:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=51.158.179.2:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=62.109.23.159:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=213.159.214.54:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=198.50.158.52:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=51.15.60.223:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=34.70.115.113:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=155.138.147.104:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=34.83.218.180:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=92.242.40.112:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=95.216.217.62:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=51.158.162.17:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=51.15.126.86:53572" >> ${NAME}.conf_TEMP
-  echo "addnode=185.224.135.143:53572" >> ${NAME}.conf_TEMP
   
   sudo ufw allow [$IPADDRESS]:53572/tcp
 

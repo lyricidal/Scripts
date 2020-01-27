@@ -4,11 +4,11 @@ echo "Starting DAPS Staking node download and install script"
 echo "Updating/Upgrading OS..."
 sudo apt update && sudo apt upgrade -y
 echo "Downloading latest build..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5/dapscoin-v1.0.5.7-linux.zip
+wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5/dapscoin-v1.0.5.8-linux.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping dapscoin_linux-v1.0.5.zip..."
-sudo unzip -jo master_linux-v1.0.5.7.zip -d /usr/local/bin
+sudo unzip -jo master_linux-v1.0.5.8.zip -d /usr/local/bin
 chmod +x /usr/local/bin/dapscoind
 chmod +x /usr/local/bin/dapscoin-cli
 chmod +x /usr/local/bin/dapscoin-qt
@@ -34,3 +34,7 @@ sudo ufw allow 53573
 sudo ufw enable
 echo "Launching dapscoind..."
 dapscoind -daemon
+echo "Cleaning up..."
+cd
+rm -rf dapscoin-v1.0.5.8-linux.zip
+echo "Update completed!"
