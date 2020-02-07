@@ -4,7 +4,7 @@ echo "Starting DAPS Masternode download and install..."
 echo "Updating/Upgrading OS..."
 sudo apt update && sudo apt upgrade -y
 echo "Downloading latest build..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5/dapscoin-v1.0.5.8-linux.zip
+wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5.8/dapscoin-v1.0.5.8-linux.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping latest zip..."

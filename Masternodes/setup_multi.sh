@@ -42,7 +42,7 @@ if [[ $DOSETUP =~ "y" ]] ; then
   cd
 
   ## INSTALL
-  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5/dapscoin-v1.0.5.8-linux.zip
+  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5.8/dapscoin-v1.0.5.8-linux.zip
   sudo apt-get install unzip
   sudo unzip dapscoin-v1.0.5.8-linux.zip -d /usr/local/bin
   chmod +x /usr/local/bin/dapscoind
