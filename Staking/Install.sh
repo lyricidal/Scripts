@@ -8,7 +8,7 @@ wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.5.8/dapscoin-
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping dapscoin_linux-v1.0.5.zip..."
-sudo unzip -jo master_linux-v1.0.5.8.zip -d /usr/local/bin
+sudo unzip -jo dapscoin-v1.0.5.8-linux.zip -d /usr/local/bin
 chmod +x /usr/local/bin/dapscoind
 chmod +x /usr/local/bin/dapscoin-cli
 chmod +x /usr/local/bin/dapscoin-qt
