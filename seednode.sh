@@ -11,5 +11,5 @@ echo "Building seeder..."
 cd daps-seeder
 make
 echo "Installing to /usr/local/bin..."
-cp dnsseed /usr/local/bin
+sudo cp dnsseed /usr/local/bin
 echo "Done!"
