@@ -12,4 +12,11 @@ cd daps-seeder
 make
 echo "Installing to /usr/local/bin..."
 sudo cp dnsseed /usr/local/bin
+echo "Editing seeder service..."
+nano contrib/init/daps-seeder.service
+echo "Installing seeder service..."
+sudo cp contrib/init/daps-seeder.service /etc/systemd/system/
+echo "Starting seeder service..."
+sudo systemctl start daps-seeder.service
+sudo systemctl enable daps-seeder.service
 echo "Done!"
