@@ -131,7 +131,7 @@ for i in `seq 1 1 $MNCOUNT`; do
   wget -o theiexplorers.com/peers.dat
   cp peers.dat $CONF_DIR/peers.dat
   rm -rf bootstrap.zip
-  wget --no-check-certificate --content-disposition https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+  wget https://bootstrap.dapscoin.com/bootstrap.zip
   echo "Removing old blocks, chainstate, and database folders...."
   rm -rf $CONF_DIR/blocks $CONF_DIR/chainstate $CONF_DIR/database
   echo "Installing new blocks folders..."

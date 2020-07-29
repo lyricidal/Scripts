@@ -5,7 +5,7 @@ echo "Stopping dapscoind..."
 dapscoin-cli stop
 sleep 5
 echo "Downloading BootStrap..."
-wget -N https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+wget -N https://bootstrap.dapscoin.com/bootstrap.zip
 echo "Removing old blocks, chainstate, and database folders...."
 rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/.lock ~/.dapscoin/dapscoind.pid
 echo "Installing unzip..."
