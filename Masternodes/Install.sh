@@ -32,6 +32,20 @@ sudo ufw allow ssh
 sudo ufw allow 53572
 sudo ufw allow 53573
 sudo ufw enable
+
+echo "Do you want to download and install the latest BootStrap? [y/n]"
+read BOOTSTRAP
+
+if [[ $BOOTSTRAP =~ "y" ]] ; then
+  echo "Downloading BootStrap..."
+  wget -N https://bootstrap.dapscoin.com/bootstrap.zip
+  echo "Removing old blocks, chainstate, and database folders...."
+  rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/.lock ~/.dapscoin/dapscoind.pid
+  echo "Installing new blocks/chainstate folders..."
+  unzip -o bootstrap.zip -d ~/.dapscoin
+  echo "Bootstrap installed!"
+fi
+
 echo "Launching dapscoind..."
 dapscoind -daemon
 echo "Cleaning up..."
