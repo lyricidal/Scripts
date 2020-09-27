@@ -4,7 +4,7 @@ echo "Starting DAPS Staking update script"
 echo "Stopping dapscoind..."
 dapscoin-cli stop
 echo "Downloading update..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.7.1/dapscoin-v1.0.7.1-linux.zip
+wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.7.1/dapscoin-v1.0.8.0-linux.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Extracting update..."
