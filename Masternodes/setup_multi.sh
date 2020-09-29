@@ -1,4 +1,5 @@
 #/bin/bash
+VERSION=1.0.8.0
 
 cd ~
 echo "****************************************************************************"
@@ -42,16 +43,16 @@ if [[ $DOSETUP =~ "y" ]] ; then
   cd
 
   ## INSTALL
-  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.8.0/dapscoin-v1.0.8.0-linux.zip
+  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/$VERSION/dapscoin-v$VERSION-linux.zip
   sudo apt-get install unzip
-  sudo unzip dapscoin-v1.0.8.0-linux.zip -d /usr/local/bin
+  sudo unzip dapscoin-v$VERSION-linux.zip -d /usr/local/bin
   chmod +x /usr/local/bin/dapscoind
   chmod +x /usr/local/bin/dapscoin-cli
   chmod +x /usr/local/bin/dapscoin-qt
   sudo chmod 755 daspcoin*
   sudo mv dapscoin* /usr/bin
   cd
-  rm -rf dapscoin-v1.0.8.0-linux.zip
+  rm -rf dapscoin-v$VERSION-linux.zip
 
   echo "Setting up and enabling fail2ban..."
   sudo apt-get install fail2ban -y
