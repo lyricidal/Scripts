@@ -16,8 +16,9 @@ echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
 cd ~/.dapscoin
 echo "Editing dapscoin.conf..."
-echo rpcuser= >> dapscoin.conf
-echo rpcpassword= >> dapscoin.conf
+IP=$(ip a s eth0 | awk '/inet / {print$2}' | cut -d/ -f1)
+echo rpcuser=user`shuf -i 100000-10000000 -n 1` >> dapscoin.conf
+echo rpcpassword=pass`shuf -i 100000-10000000 -n 1` >> dapscoin.conf
 echo rpcallowip=127.0.0.1 >> dapscoin.conf
 echo server=1 >> dapscoin.conf
 echo daemon=1 >> dapscoin.conf
@@ -25,7 +26,9 @@ echo listen=1 >> dapscoin.conf
 echo staking=0 >> dapscoin.conf
 echo logtimestamps=1 >> dapscoin.conf
 echo masternode=1 >> dapscoin.conf
-echo externalip= >> dapscoin.conf
+echo externalip=$IP:53572 >> dapscoin.conf
+echo masternodeaddr=$IP:53572 >> dapscoin.conf
+echo bind=$IP:53572 >> dapscoin.conf
 echo masternodeprivkey= >> dapscoin.conf
 vi dapscoin.conf >> dapscoin.conf
 echo "Setting up and enabling fail2ban..."
