@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=1.0.8.1
+VERSION=1.0.9.0
 
 clear
 echo "Starting DAPS Staking node download and install script"

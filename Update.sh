@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=1.0.8.2
+VERSION=1.0.9.0
 
 clear
 echo "Starting DAPS update script"
