@@ -1,21 +1,21 @@
 #!/bin/sh
-VERSION=1.0.9.0
+VERSION=1.0.0.2
 
 clear
-echo "Starting DAPS Staking update script"
-echo "Stopping dapscoind..."
-dapscoin-cli stop
+echo "Starting PRCY Staking update script"
+echo "Stopping prcycoind..."
+prcycoin-cli stop
 echo "Downloading update..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/$VERSION/dapscoin-v$VERSION-linux.zip
+wget -N https://github.com/PRCYCoin/PRCYCoin/releases/download/$VERSION/prcycoin-v$VERSION-x86_64-linux.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Extracting update..."
-sudo unzip -jo dapscoin-v$VERSION-linux.zip -d /usr/local/bin
+sudo unzip -jo prcycoin-v$VERSION-x86_64-linux.zip -d /usr/local/bin
 echo "Set permissions on files..."
 sudo chmod +x /usr/local/bin/daps*
-echo "Running dapscoind..."
-dapscoind -daemon
+echo "Running prcycoind..."
+prcycoind -daemon
 echo "Cleaning up..."
 cd
-rm -rf dapscoin-v$VERSION-linux.zip
+rm -rf prcycoin-v$VERSION-x86_64-linux.zip
 echo "Update completed!"

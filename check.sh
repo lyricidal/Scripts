@@ -1,13 +1,13 @@
 #!/bin/sh
 
-DAPS='dapscoind'
+PRCY='prcycoind'
 
 clear
-echo "Checking if dapscoind is running..."
-if ps ax | grep -v grep | grep $DAPS> /dev/null
+echo "Checking if prcycoind is running..."
+if ps ax | grep -v grep | grep $PRCY> /dev/null
 then
-    echo "$DAPS is running, no further action required"
+    echo "$PRCY is running, no further action required"
 else
-    echo "$DAPS is not running, starting it now"
-	dapscoind -daemon
+    echo "$PRCY is not running, starting it now"
+	prcycoind -daemon
 fi

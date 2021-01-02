@@ -11,4 +11,4 @@ echo "Stopping Service..."
 sudo cp dnsseed /usr/local/bin
 echo "Stopping Service..."
 sudo systemctl start daps-seeder.service
-echo "DAPS Seed Node updated successfully!"
+echo "PRCY Seed Node updated successfully!"

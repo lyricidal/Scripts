@@ -1,15 +1,15 @@
 #!/bin/sh
 clear
-echo "Starting DAPS Bootstrap install script"
-echo "Stopping dapscoind..."
-dapscoin-cli stop
+echo "Starting PRCY Bootstrap install script"
+echo "Stopping prcycoind..."
+prcycoin-cli stop
 sleep 5
 echo "Downloading BootStrap..."
-wget -N https://bootstrap.dapscoin.com/bootstrap.zip
+wget -N https://bootstrap.prcycoin.com/bootstrap.zip
 echo "Removing old blocks, chainstate, and database folders...."
-rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/.lock ~/.dapscoin/dapscoind.pid
+rm -rf ~/.prcycoin/blocks ~/.prcycoin/chainstate ~/.prcycoin/database ~/.prcycoin/.lock ~/.prcycoin/prcycoind.pid
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Installing new blocks/chainstate folders..."
-unzip -o bootstrap.zip -d ~/.dapscoin
+unzip -o bootstrap.zip -d ~/.prcycoin
 echo "Bootstrap installed!"

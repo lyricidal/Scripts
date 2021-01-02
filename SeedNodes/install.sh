@@ -6,7 +6,7 @@ sudo apt upgrade -y
 echo "Installing dependencies..."
 sudo apt install build-essential libboost-dev libssl-dev -y
 echo "Cloning Git Repo..."
-git clone https://github.com/DAPSCoin/daps-seeder.git
+git clone https://github.com/PRCYCoin/generic-seeder.git
 echo "Building seeder..."
 cd daps-seeder
 make

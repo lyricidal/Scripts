@@ -1,11 +1,11 @@
 #/bin/bash
-VERSION=1.0.9.0
+VERSION=1.0.0.2
 
 cd ~
 echo "****************************************************************************"
 echo "* Ubuntu 16.04 is the recommended opearting system for this install.       *"
-echo "*               Adapted for DAPS by Canal Cripto Hold                      *"
-echo "* This script will install and configure your DAPSCOIN masternodes.        *"
+echo "*               Adapted for PRCY by Canal Cripto Hold                      *"
+echo "* This script will install and configure your PRCYCOIN masternodes.        *"
 echo "****************************************************************************"
 echo && echo && echo
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -43,22 +43,22 @@ if [[ $DOSETUP =~ "y" ]] ; then
   cd
 
   ## INSTALL
-  wget https://github.com/DAPSCoin/DAPSCoin/releases/download/$VERSION/dapscoin-v$VERSION-linux.zip
+  wget https://github.com/PRCYCoin/PRCYCoin/releases/download/$VERSION/prcycoin-v$VERSION-x86_64-linux.zip
   sudo apt-get install unzip
-  sudo unzip dapscoin-v$VERSION-linux.zip -d /usr/local/bin
-  chmod +x /usr/local/bin/dapscoind
-  chmod +x /usr/local/bin/dapscoin-cli
-  chmod +x /usr/local/bin/dapscoin-qt
+  sudo unzip prcycoin-v$VERSION-x86_64-linux.zip -d /usr/local/bin
+  chmod +x /usr/local/bin/prcycoind
+  chmod +x /usr/local/bin/prcycoin-cli
+  chmod +x /usr/local/bin/prcycoin-qt
   sudo chmod 755 daspcoin*
-  sudo mv dapscoin* /usr/bin
+  sudo mv prcycoin* /usr/bin
   cd
-  rm -rf dapscoin-v$VERSION-linux.zip
+  rm -rf prcycoin-v$VERSION-x86_64-linux.zip
 
   echo "Setting up and enabling fail2ban..."
   sudo apt-get install fail2ban -y
   sudo ufw allow ssh
-  sudo ufw allow 53572
-  sudo ufw allow 53573
+  sudo ufw allow 59682
+  sudo ufw allow 59683
   sudo ufw enable
 
   mkdir -p ~/bin
@@ -69,8 +69,8 @@ fi
 ## Setup conf
 mkdir -p ~/bin
 IP=$(curl -s4 theiexplorers.com)
-NAME="dapscoin"
-CONF_FILE=dapscoin.conf
+NAME="prcycoin"
+CONF_FILE=prcycoin.conf
 
 MNCOUNT=""
 re='^[0-7]+$'
@@ -119,12 +119,12 @@ for i in `seq 1 1 $MNCOUNT`; do
   echo "maxconnections=256" >> ${NAME}.conf_TEMP
   echo "IPADDRESS=[$IPADDRESS]" >> ${NAME}.conf_TEMP
   echo "externalip=[$IPADDRESS]" >> ${NAME}.conf_TEMP
-  echo "masternodeaddr=[$IPADDRESS]:53572" >> ${NAME}.conf_TEMP
-  echo "bind=[$IPADDRESS]:53572" >> ${NAME}.conf_TEMP
+  echo "masternodeaddr=[$IPADDRESS]:59682" >> ${NAME}.conf_TEMP
+  echo "bind=[$IPADDRESS]:59682" >> ${NAME}.conf_TEMP
   echo "masternode=1" >> ${NAME}.conf_TEMP
   echo "masternodeprivkey=$PRIVKEY" >> ${NAME}.conf_TEMP
   
-  sudo ufw allow [$IPADDRESS]:53572/tcp
+  sudo ufw allow [$IPADDRESS]:59682/tcp
 
   mv ${NAME}.conf_TEMP $CONF_DIR/${NAME}.conf
   
@@ -132,7 +132,7 @@ for i in `seq 1 1 $MNCOUNT`; do
   wget -o theiexplorers.com/peers.dat
   cp peers.dat $CONF_DIR/peers.dat
   rm -rf bootstrap.zip
-  wget https://bootstrap.dapscoin.com/bootstrap.zip
+  wget https://bootstrap.prcycoin.com/bootstrap.zip
   echo "Removing old blocks, chainstate, and database folders...."
   rm -rf $CONF_DIR/blocks $CONF_DIR/chainstate $CONF_DIR/database
   echo "Installing new blocks folders..."
