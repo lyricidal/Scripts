@@ -1,15 +1,15 @@
 #!/bin/sh
 clear
-echo "Starting PRCY Bootstrap install script"
-echo "Stopping prcycoind..."
-prcycoin-cli stop
+echo "Starting Rapids Bootstrap install script"
+echo "Stopping rapidsd..."
+rapids-cli stop
 sleep 5
 echo "Downloading BootStrap..."
 wget -N https://bootstrap.prcycoin.com/bootstrap.zip
-echo "Removing old blocks, chainstate, and database folders...."
-rm -rf ~/.prcycoin/blocks ~/.prcycoin/chainstate ~/.prcycoin/database ~/.prcycoin/.lock ~/.prcycoin/prcycoind.pid
+echo "Removing old blocks, chainstate, database, sporks, and zerocoin folders...."
+rm -rf ~/.rapids/blocks ~/.rapids/chainstate ~/.rapids/database ~/.rapids/.lock ~/.rapids/rapids.pid ~/.rapids/sporks ~/.rapids/zerocoin
 echo "Installing unzip..."
 sudo apt-get install unzip -y
-echo "Installing new blocks/chainstate folders..."
-unzip -o bootstrap.zip -d ~/.prcycoin
+echo "Installing new blocks/chainstate/sporks/zerocoin folders..."
+unzip -o bootstrap.zip -d ~/.rapids
 echo "Bootstrap installed!"
